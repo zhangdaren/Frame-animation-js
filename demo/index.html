@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Frame animation js demo</title>
+		<meta name="viewport" content="width=device-width,target-densitydpi=device-dpi,user-scalable=no">
+		<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+		<script type="text/javascript" src="js/frameAnimation.js" ></script>
+		<style>
+			body,
+			h2,
+			p {
+				border: medium none;
+				margin: 0;
+				padding: 0;
+			}
+			
+			header,
+			#content {
+				width: 550px;
+				margin: 0 auto;
+			}
+			
+			header {
+				margin: 5px auto;
+				text-align: left;
+				line-height: 2;
+				color: #666;
+				margin-bottom: 40px;
+			}
+			
+			header p {
+				font-size: 15px;	color: #777;
+			}
+			
+			.sprite {
+				background-image: url("img/sprite.png");
+				width: 103px;
+				height: 206px;  
+				margin: 20px 0; 
+			}
+			.btnGroup{
+				margin-top: 20px;
+			}
+		</style>
+		<script>
+			$(function() {
+				var anim = frameAnimation.anims($('#sprite'), 518, 5, 0.5, 2);
+				//正序
+				$("#playBtn").click(function(){
+					anim.stop();
+					anim.start();
+				});
+				//倒序
+				$("#revPlayBtn").click(function(){
+					anim.stop();
+					anim.start(true);
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<h2>帧动画js实现</h2>
+			<p>tips:依赖jQuery。</p>
+			<p>init:</p>
+			<p style="text-indent: 2em;">var anim = frameAnimation.anims($('#sprite'), 518, 5, 0.5, 2);</p>
+			<p>play:</p>
+			<p style="text-indent: 2em;">anim.start(); //正序播放</p>
+			<p style="text-indent: 2em;">anim.start(true); //倒序播放</p>
+		</header>
+
+		<div id="content">
+			<div class="sprite" id="sprite"></div>
+			<div class="btnGroup">
+				<button id="playBtn">正序</button>
+				<button id="revPlayBtn">倒序</button>
+			</div>
+
+		</div>
+	</body>
+
+</html>
