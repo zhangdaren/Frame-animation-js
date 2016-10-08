@@ -7,8 +7,11 @@
 --添加了倒序播放功能。
 
 init:
+
 	var anim = frameAnimation.anims($('#animbg'), 720, 6, 1, 0);
   
 play:
+
 	anim.start();  //正序播放
+	
 	anim.start(true);  //倒序播放
