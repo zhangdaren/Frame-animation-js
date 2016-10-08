@@ -15,3 +15,7 @@ play:
 	anim.start();  //正序播放
 	
 	anim.start(true);  //倒序播放
+
+
+demo:
+https://zhangdaren.github.io/Frame-animation-js/demo/index.html
