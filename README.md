@@ -17,5 +17,15 @@ play:
 	anim.start(true);  //倒序播放
 
 
+option:
+	var anim = frameAnimation.anims($('#animbg'), 720, 6, 1, 0);
+	
+	obj => 需要执行背景动画的对象；
+	width => 图片的总宽度
+	steps => 需要的帧数；
+	eachtime => 一次完整动画需要的时间(单位：秒)；
+	times => 动画执行的次数   0表示无限反复
+	isReverse => 是否倒序播放
+
 demo:
 https://zhangdaren.github.io/Frame-animation-js/demo/index.html
